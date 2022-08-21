@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+</head>
+<body>
+ <div class="container">
+   <h1 style="color:red">User Registration form</h1>
+   <form class="col-5" th:action="@{/registerUser}" th:object="${user}" method="post">
+      <div class="mb-3" >
+      <label><b>Name</b></label>
+      <br>
+      <input type="text" th:field="*{name}" class="form-control" placeholder="Enter name">
+      </div>
+      <div class="mb-3">
+      <label><b>UserName</b></label>
+      <br>
+      <input type="text" th:field="*{username}" class="form-control" placeholder=" Enter username">
+      </div>
+      <div>
+      <label><b>Email</b></label>
+      <br>
+      <input type="text" th:field="*{email}" class="form-control" placeholder="Enter email">
+      </div>
+      <div class="mb-3">
+      <label><b>Phone</b></label>
+      <br>
+      <input type="number" th:field="*{phone}" class="form-control" placeholder="Enter phoneNumber">
+      </div>
+      <div>
+      <label><b>Password</b></label>
+      <br>
+      <input type="text" th:field="*{password}" class="form-control" placeholder="Enter password">
+      </div>
+      <div class="mb-3">
+      <label><b>Confirm password</b></label>
+      <br>
+      <input type="text" th:field="*{cpassword}" class="form-control" placeholder="Enter Confirm password">
+      </div>
+      <div>
+      <label><b>Gender</b></label><br>
+      <input type="radio" id="male" name="gender" value="male">
+		 <label>Male</label>
+		 <input type="radio" id="male" name="gender" value="female">
+		 <label>Female</label>
+      </div>
+      <button type="submit" class="btn btn-success" style="background-color:green">Register</button>
+   </form>
+ </div>
+</body>
+</html>
